@@ -1,0 +1,6 @@
+{
+  "name": "Almani Hero Redesign",
+  "description": "A modern redesign of a German language learning hero section.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

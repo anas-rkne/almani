@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Bauhaus CSS Overlay */
+.bauhaus-pattern-overlay {
+  position: relative;
+}
+
+.bauhaus-pattern-overlay::before {
+  content: '';
+  position: absolute;
+  top: -4rem;
+  left: -4rem;
+  right: -4rem;
+  bottom: -4rem;
+  z-index: -1;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 85% 15%, rgba(251, 191, 36, 0.12) 0, rgba(251, 191, 36, 0.12) 40px, transparent 41px),
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 80px, transparent 81px),
+    linear-gradient(135deg, transparent 49.5%, rgba(255, 255, 255, 0.04) 49.5%, rgba(255, 255, 255, 0.04) 50.5%, transparent 50.5%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 60px 60px, 30px 30px, 30px 30px;
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%);
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 70%);
+}
+
+/* Flag Drop & Swing Entrance */
+@keyframes flag-drop-swing {
+  0% {
+    transform: translateY(-100%) rotate(-15deg);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0) rotate(10deg);
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(0) rotate(-5deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-flag-drop {
+  animation: flag-drop-swing 2s ease-out forwards;
+  transform-origin: top center;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
